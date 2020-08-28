@@ -1,0 +1,76 @@
+#include <stdio.h>
+    #include <conio.h>
+    #include <stdlib.h>
+    int main (void )
+    {
+      int matriz[10][3],i, j;
+      
+	  matriz[0][0]= 7;
+	  matriz[1][0]= 22;
+	  matriz[2][0]= 12;
+	  matriz[3][0]= 23;
+	  matriz[4][0]= 31;
+	  matriz[5][0]= 2;
+	  matriz[6][0]= 7;
+	  matriz[7][0]= 25;
+	  matriz[8][0]= 17;
+	  matriz[9][0]= 10;
+	  matriz[0][1]= 11;
+	  matriz[1][1]= 19;
+	  matriz[2][1]= 23;
+	  matriz[3][1]= 27;
+	  matriz[4][1]= 2;
+	  matriz[5][1]= -2;
+	  matriz[6][1]= 34;
+	  matriz[7][1]= 0;
+	  matriz[8][1]= 1;
+	  matriz[9][1]= 35;
+  	  
+      for(i=0; i<10; i++){
+      	matriz[i][2]= (matriz[i][0]+matriz[i][1])/2;
+	  }
+      
+     int continuar=1;
+
+    {
+        printf("\n\tTemperatura ddos ultimos 10 dias\n\n");
+        printf("1. temperatura minima de todos os dias\n");
+        printf("2. temperatura máxima de todos os dias\n");
+        printf("3. maior variação de temperatura de todos os dias\n");
+        printf("0. Sair do programa\n");
+
+        scanf("%d", &continuar);
+        system("cls || clear");
+
+        switch(continuar)
+        {
+            case 1:
+                 for(i=0; i<10; i++){
+      				printf("%d  ", matriz[i][0]);
+	  			 }
+                break;
+
+            case 2:
+                for(i=0; i<10; i++){
+      				printf("%d  ", matriz[i][1]);
+	  			 }
+                break;
+
+            case 3:
+                for(i=0; i<10; i++){
+      				printf("%d  ", matriz[i][2]);
+	  			 }
+                break;
+
+            case 4:
+                break;
+
+            default:
+                printf("Digite uma opcao valida\n");
+        }
+    } while(continuar);
+      return(0);
+      
+      
+      
+    }
